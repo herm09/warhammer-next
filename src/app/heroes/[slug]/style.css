@@ -1,40 +1,44 @@
-/* Reset CSS */
-html {
-    font-size: 62.5%;
-    font-weight: 300;
-    scroll-behavior: smooth;
-}
-
-h1 {
+.hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: 3.6rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 2rem;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0f3460;
+    color: #dfd8d8;
 }
 
-a {
-    text-decoration: none;
-    color: #222;
+.heroName {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 3rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-* {
-    box-sizing: border-box;
+img {
+    width: 15%;
+    margin-bottom: 3rem;
 }
 
-.ParaPres {
-    font-size: 1.6rem;
-    color: #fff;
+.heroTxt {
     margin-bottom: 1rem;
-    width: 50%;
+    width: 75%;
+    font-size: 1.2rem;
 }
 
-h2 {
+.backHero {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fff;
+    align-items: center;
+    text-decoration: none;
+    height: 3rem;
+    width: 8rem;
+    background-color: #0a223f;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
 }

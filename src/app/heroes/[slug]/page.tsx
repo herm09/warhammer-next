@@ -24,8 +24,8 @@ export default async function HeroesPage({ params, }: { params: Promise<{ slug: 
     const response = await fetch(`http://localhost:1337/api/heroes?filters[slug][$eq]=${slug}&populate=*`)
     const hero: Hero = (await response.json()).data[0]
     return (
-        <div>
-            <h3>{hero.name}</h3>
+        <div className="hero">
+            <h3 className="heroName">{hero.name}</h3>
             <Image
                 src={`http://localhost:1337${hero.design[0].url}`}
                 width={200}
@@ -33,9 +33,9 @@ export default async function HeroesPage({ params, }: { params: Promise<{ slug: 
                 alt={hero.name}
             />
             {hero.details.map((detail, index) => (
-                <p key={index}>{detail.children[0].text}</p>
+                <p key={index} className="heroTxt">{detail.children[0].text}</p>
             ))}
-            <Link href="/heroes">Retour</Link>
+            <Link href="/heroes" className="backHero">Retour</Link>
         </div>
     );
 }

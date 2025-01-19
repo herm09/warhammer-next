@@ -20,15 +20,15 @@ export default async function Hero() {
     const data = await response.json();
     console.log(data);
     return (
-        <>
+        <div className="listHeroes">
             <div className="List">
                 <Link href ="/" className="buttonHeroes">Retour</Link>
                 <h2>Liste des héros de la faction Tzeentch</h2>
             </div>
-            <div>
+            <div className="heroes">
                 {data.data.map((hero: Hero) => (
-                    <Link href={"/heroes/" + hero.slug}  key={hero.id}>
-                        <h3 className="heroName">{hero.name}</h3>
+                    <Link href={"/heroes/" + hero.slug}  key={hero.id} className="buttonHero">
+                        <h3 className="heroesName">{hero.name}</h3>
                         <Image
                             src={`http://localhost:1337${hero.design[0].url}`}
                             width={200}
@@ -38,6 +38,6 @@ export default async function Hero() {
                     </Link>
                 ))}
             </div>
-        </>    
+        </div>    
     );
 }

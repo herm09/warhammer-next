@@ -1,49 +1,38 @@
-/* Reset CSS */
-html {
-    font-size: 62.5%;
-    font-weight: 300;
-    scroll-behavior: smooth;
+.homePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0f3460;
+    color: #dfd8d8;
 }
 
-body {
-    font: 1.6rem "Open-Sans", sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    letter-spacing: 0.1rem;
-    height: 100vh;
-    padding: 2rem;
-    background-color: #565656;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-h1 {
+.homePage h1 {
     display: flex;
     justify-content: center;
-    font-size: 3.6rem;
+    font-size: 2.7rem;
     font-weight: 700;
-    color: #fff;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
-.presentation {
+.presentation { /* first section */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     height: 55vh;
-    width: 100%;
-    background-color: #565656;
+    width: 85%;
     gap: 2rem;
 }
 
-.ParaPres {
-    font-size: 1.6rem;
-    color: #fff;
+.presTxt {
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     width: 50%;
+    font-size: 1.4rem;
 }
 
 .factions {
@@ -53,20 +42,18 @@ h1 {
     align-items: center;
 }
 
-h2 {
+.factions h2 {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: #fff;
     margin-bottom: 2rem;
 }
 
-.presTxt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 83%;
+.factionsTxt {
+    margin-bottom: 1rem;
+    width: 75%;
+    font-size: 1.2rem;
 }
 
 .button-container {
@@ -83,11 +70,10 @@ h2 {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #eaeaea;
-    background-color: #0f3460;
+    background-color: #0a223f;
     padding: 8px 16px;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }

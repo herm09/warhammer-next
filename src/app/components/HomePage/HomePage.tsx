@@ -56,11 +56,11 @@ export default function HomePage() {
     if (error) return <p>Erreur : {error}</p>;
 
     return (
-        <>
+        <div className="homePage">
             <h1>Warhammer c&apos;est quoi ?</h1>
 
             <section className="presentation">
-                <p className="ParaPres">
+                <p className="presTxt">
                     Warhammer est un jeu de figurines qui se joue avec des armées de figurines
                     en plastique ou en métal. Les figurines sont peintes et assemblées par les
                     joueurs, puis utilisées pour simuler des batailles entre différentes armées. Le
@@ -88,13 +88,13 @@ export default function HomePage() {
                 )}
 
                 {faction && faction.description.map((paragraph, index) => (
-                    <p key={index} className="presTxt">{paragraph.children[0].text}</p>
+                    <p key={index} className="factionsTxt">{paragraph.children[0].text}</p>
                 ))}
             </section>
             
             <div className="button-container">
-                <Link href="/heroes" className="buttonHome">Héros</Link>
+                <Link href="/heroes" className="buttonHome">Découvrir les héros</Link>
             </div>
-        </>
+        </div>
     );
 }

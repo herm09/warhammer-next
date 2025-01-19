@@ -1,32 +1,35 @@
-/* style.css */
-
-/* General styling for the page */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a2e;
-    color: #eaeaea;
-}
-
-/* Container for the hero list */
-.List {
-    text-align: center;
-    margin: 20px;
-    padding: 10px;
-    border-bottom: 2px solid #0f3460;
-}
-
-/* Back button styling */
-.buttonHeroes {
-    text-decoration: none;
-    color: #eaeaea;
+.listHeroes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     background-color: #0f3460;
-    padding: 8px 16px;
+    color: #dfd8d8;
+}
+
+.List { /* button + title */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    height: 14rem;
+}
+
+.buttonHeroes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 3rem;
+    width: 8rem;
+    background-color: #0a223f;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.2rem;
 }
 
 .buttonHeroes:hover {
@@ -34,22 +37,44 @@ body {
     transform: translateY(-2px);
 }
 
-/* Header for the list */
 .List h2 {
-    margin: 20px 0;
-    color: #e94560;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
-/* Individual hero link */
-a {
-    text-decoration: none;
-    color: inherit;
+.heroes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 2rem;
 }
 
-.heroName {
+.buttonHero {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #0f3460;
+    border: #0a223f 2px solid;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    font-size: 1.2rem;
+    overflow: hidden;
+
+}
+
+.heroesName {
+    text-align: center;
+    font-size: 1rem;
     margin: 10px 0;
+    height: 3rem;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -58,36 +83,17 @@ a {
     color: #e94560;
 }
 
-/* Hero card container */
-div > a {
-    display: inline-block;
-    width: 250px;
-    height: 350px;
-    margin: 20px;
-    padding: 10px;
-    background-color: #0f3460;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    overflow: hidden;
-}
-
 div > a:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background-color: #10478b;
 }
 
-/* Hero image styling */
 img {
+    margin-top: 3rem;
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    bottom: 0; /* Aligne en bas */
+    left: 50%; /* Centre horizontalement */
 }
