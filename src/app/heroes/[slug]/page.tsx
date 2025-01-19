@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
+import "./style.css";
 
 export default async function HeroesPage({ params, }: { params: Promise<{ slug: string }> }) {
     interface Hero {

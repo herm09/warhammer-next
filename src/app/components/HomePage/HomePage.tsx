@@ -56,7 +56,7 @@ export default function HomePage() {
     if (error) return <p>Erreur : {error}</p>;
 
     return (
-        <div>
+        <>
             <h1>Warhammer c&apos;est quoi ?</h1>
 
             <section className="presentation">
@@ -67,7 +67,6 @@ export default function HomePage() {
                     jeu est joué sur une table recouverte d&apos;un tapis de jeu, et les joueurs
                     utilisent des dés et des règles pour déterminer le résultat des combats.
                 </p>
-
                 <Image
                     src="/homePage.jpeg"
                     width={400}
@@ -79,21 +78,23 @@ export default function HomePage() {
             <section className="factions">
                 <h2>{faction ? faction.title : "Faction inconnue"}</h2>
 
-                {faction && faction.description.map((paragraph, index) => (
-                    <p key={index}>{paragraph.children[0].text}</p>
-                ))}
-
                 {faction && faction.design[0].url && (
                     <Image
                         src={`http://localhost:1337${faction.design[0].url}`}
-                        width={400}
-                        height={300}
+                        width={200}
+                        height={100}
                         alt={faction.title}
                     />
                 )}
-            </section>
 
-            <Link href="/heroes">Héros</Link>
-        </div>
+                {faction && faction.description.map((paragraph, index) => (
+                    <p key={index} className="presTxt">{paragraph.children[0].text}</p>
+                ))}
+            </section>
+            
+            <div className="button-container">
+                <Link href="/heroes" className="buttonHome">Héros</Link>
+            </div>
+        </>
     );
 }

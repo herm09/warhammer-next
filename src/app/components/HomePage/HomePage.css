@@ -15,6 +15,10 @@ body {
     background-color: #565656;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -22,15 +26,6 @@ h1 {
     font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
-}
-
-a {
-    text-decoration: none;
-    color: #222;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .presentation {
@@ -51,6 +46,13 @@ a {
     width: 50%;
 }
 
+.factions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 h2 {
     display: flex;
     justify-content: center;
@@ -58,4 +60,34 @@ h2 {
     font-weight: 700;
     color: #fff;
     margin-bottom: 2rem;
+}
+
+.presTxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 83%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buttonHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #eaeaea;
+    background-color: #0f3460;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
